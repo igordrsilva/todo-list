@@ -15,8 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+        <head>
+            <meta charSet="UTF-8" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <title>To-Do List</title>
+        </head>
+        <body suppressHydrationWarning={true}>
+            <div className="min-h-screen h-screen overflow-hidden dark:bg-boxdark-2 dark:text-bodydark">
+                {children}
+            </div>
+        </body>
     </html>
-  );
+);
 }
